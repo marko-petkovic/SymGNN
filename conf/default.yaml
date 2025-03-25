@@ -1,4 +1,4 @@
-expname: symnet
+expname: symgnn
 workdir: experiments
 
 core:
@@ -11,7 +11,8 @@ epochs: 400
 device: 'cuda'
 
 defaults:
-  - dataset: test_zeo
-  - model: wyckoff_sym
+  - dataset: gen
+  - model: symgnn
   - logging: default
   - optim: default
+  - isotherm: default

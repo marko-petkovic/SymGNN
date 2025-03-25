@@ -1,0 +1,16 @@
+train_codes: 'all'
+val_codes: null
+test_codes: null
+
+val_split: 0.1
+test_split: 0.1
+
+batch_size: 128
+n_samples: 250
+
+edge_type: 'radius'
+radius: 8.
+
+subsample_zeolites: null
+samples_per_code: null
+seed: 42

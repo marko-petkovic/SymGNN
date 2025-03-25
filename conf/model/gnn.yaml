@@ -1,0 +1,15 @@
+_target_: symgraph.model.model.GNN
+name: 'gnn'
+num_layers: 5
+hidden: 64
+bias: True
+out_size: 1
+attention: True
+hyper_hidden: 32
+hyper_num_heads: 4
+edge_dropout: 0.5
+iso_dropout: 0.
+
+
+hyper_node_type: 'none'
+hyper_edge_type: 'none'

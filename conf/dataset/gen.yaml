@@ -1,0 +1,16 @@
+train_codes: 'all'
+val_codes: null
+test_codes: ["CHA","ITW"]
+
+val_split: null
+test_split: null
+
+batch_size: 128
+n_samples: 250
+
+edge_type: 'radius'
+radius: 8.
+
+subsample_zeolites: null
+samples_per_code: null
+seed: 42
