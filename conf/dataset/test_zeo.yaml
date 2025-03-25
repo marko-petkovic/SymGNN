@@ -1,0 +1,6 @@
+train_codes: 'all'
+val_split: 0.1
+test_codes: ['MEL', 'RHO']
+
+batch_size: 32
+sub_sample: True

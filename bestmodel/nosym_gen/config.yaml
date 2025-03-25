@@ -1,0 +1,72 @@
+dataset:
+  train_codes: all
+  val_codes:
+  - CHA
+  - ITW
+  test_codes:
+  - CHA
+  - ITW
+  val_split: 0.1
+  test_split: 0.1
+  batch_size: 128
+  n_samples: 250
+  edge_type: radius
+  radius: 8.0
+  subsample_zeolites: null
+  samples_per_code: null
+  seed: 42
+model:
+  _target_: symgraph.model.model.GNN
+  name: mpnn
+  num_layers: 5
+  hidden: 64
+  bias: true
+  out_size: 1
+  attention: true
+  hyper_hidden: 32
+  hyper_num_heads: 4
+  edge_dropout: 0.5
+  iso_dropout: 0.0
+  hyper_node_type: none
+  hyper_edge_type: none
+logging:
+  wandb:
+    name: ${expname}
+    project: symnet
+    entity: null
+    log_model: true
+    mode: online
+    group: ${expname}
+  wandb_watch:
+    log: all
+    log_freq: 500
+  lr_monitor:
+    logging_interval: step
+    log_momentum: false
+optim:
+  optimizer:
+    lr: 0.001
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    weight_decay: 0.01
+  lr_scheduler:
+    step_size: 30
+    gamma: 0.6
+  loading_weight:
+    warmup_epochs: 100
+    total_epochs: 125
+    max_weight: 1.0
+isotherm:
+  n_steps: 100
+  window_ratio: 0.25
+  iso_noise: 0.0
+expname: nosym_iso_CI_mp5_log_int
+workdir: experiments
+core:
+  version: 0.0.1
+  tags:
+  - ${now:%Y-%m-%d}
+epochs: 400
+device: cuda

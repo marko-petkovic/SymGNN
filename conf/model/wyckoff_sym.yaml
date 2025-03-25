@@ -1,0 +1,11 @@
+_target_: symgraph.model.model.GNN
+
+num_layers: 6
+hidden: 64
+bias: True
+out_size: 1
+attention: True
+hyper_hidden: 32
+
+hyper_node_type: 'wyckoff'
+hyper_edge_type: 'wyckoff'

@@ -1,0 +1,6 @@
+train_codes: ['MOR', 'MFI', 'ITW', 'TON', 'DDR', 'MEL', 'RHO']
+val_split: 0.1
+test_split: 0.1
+
+batch_size: 32
+sub_sample: True

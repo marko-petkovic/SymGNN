@@ -1,0 +1,16 @@
+wandb:
+  name: ${expname}
+  project: symnet
+  entity: null
+  log_model: True
+  mode: 'online'
+  group: ${expname}
+
+
+wandb_watch:
+  log: 'all'
+  log_freq: 500
+
+lr_monitor:
+  logging_interval: 'step'
+  log_momentum: False

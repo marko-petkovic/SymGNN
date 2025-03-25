@@ -1,0 +1,17 @@
+expname: symnet
+workdir: experiments
+
+core:
+  version: 0.0.1
+  tags:
+    - ${now:%Y-%m-%d}
+
+
+epochs: 400
+device: 'cuda'
+
+defaults:
+  - dataset: test_zeo
+  - model: wyckoff_sym
+  - logging: default
+  - optim: default
